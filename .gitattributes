@@ -1,0 +1,13 @@
+# Normalize line endings across platforms so Windows contributors
+# don't accidentally commit CRLF and trip downstream tooling
+# (eslint, prettier, etc.). Auto-detect text files and force LF
+# on checkout for everyone.
+* text=auto eol=lf
+
+# Binary types — never normalize
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
