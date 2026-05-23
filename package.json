@@ -2,10 +2,12 @@
   "name": "trpc-monorepo",
   "private": true,
   "scripts": {
-    "build": "dotenv -- turbo build",
-    "dev": "dotenv -- turbo dev",
-    "db:generate": "dotenv -- turbo db:generate",
-    "db:migrate": "dotenv -- turbo db:migrate",
+    "build": "dotenv -e .env.local -- turbo build",
+    "dev": "dotenv -e .env.local -- turbo dev",
+    "db:generate": "dotenv -e .env.local -- turbo db:generate",
+    "db:migrate": "dotenv -e .env.local -- turbo db:migrate",
+    "db:seed": "dotenv -e .env.local -- pnpm --filter @repo/database db:seed",
+    "db:studio": "dotenv -e .env.local -- pnpm --filter @repo/database db:studio",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "check-types": "turbo run check-types"

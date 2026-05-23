@@ -1,0 +1,16 @@
+{
+  "name": "@repo/validators",
+  "version": "1.0.0",
+  "private": true,
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@repo/types": "workspace:*",
+    "zod": "^4.3.5"
+  }
+}
